@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    MapWebsite
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="text-center">
+            <img src="../images/TUDublinLogo.png" width="350" height="250" class="text-center" alt="logo">
+            <h1>I Am A...</h1>
+
+            <div class="row">
+                <div class="col">
+                    <a href="{{ path('selection') }}"><img src="../images/student_icon.png" alt="Student" id="introIcon"></a>
+                    <br>
+                    <a href="{{ path('selection') }}"><button class="btn btn-dark">Student</button></a>
+                </div>
+
+                <div class="col">
+                    <a href="/index.php?action=underconstruction"><img src = "../images/visitor_icon.png" alt="Services" id="menuIcon"></a>
+                    <br>
+                    <a href="/index.php?action=underconstruction"><button class="btn btn-dark">Guest</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+    {% block title %}Create User{% endblock %}
+
+    {% block body %}
+        <main>
+            <div class="text-center">
+                <img src="../images/TUDublinLogo.png" width="350" height="250" class="text-center" alt="logo">
+                <form class="form-group" action="/register" method="post">
+                    <div class="col"></div>
+                    <h1>Signup</h1>
+                    <input type="text" class="col.col-sm-" name="{{ user.id }}" placeholder="Student ID">
+                    <div class="col"></div>
+                    <br>
+                    <input type="text" class="col.col-sm-" name="{{ user.email }}" placeholder="E-Mail">
+                    <div class="col"></div>
+                    <br>
+                    <input type="password" class="col.col-sm-" name="{{ user.password }}" placeholder="Password">
+                    <div class="col"></div>
+                    <br>
+                    <input type="password" class="col.col-sm-" name="{{ user.password }}" placeholder="Confirm Password">
+                    <br><br>
+                    <button type="submit" class="btn btn-dark" name="signup-submit" value="create_user">Signup</button>
+                    <br><br>
+                    <a href="/">Return to Homepage!</a>
+                    <br><br>
+                </form>
+            </div>
+        </main>
+    {% endblock %}

@@ -1,0 +1,52 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-4">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" style="font-variant:small-caps;font-weight:bold;font-size:36px">Home |</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto" style="font-size:20px;">
+            <li class="nav-item active">
+                <a class="nav-link" href="/index.php?action=home">Home</a>
+            </li>
+
+            {% if (staffdirectory_nav is defined) %}
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">Departments</a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="staffdirectory.php">All</a>
+                    {#<?php#}
+                    {#foreach ($departments as $department) {#}
+                    {#echo '<a class="dropdown-item" href="?department=' . $department . '">' . $department . '</a>';#}
+                    {#}#}
+                    {#?>#}
+                </div>
+            </li>
+            {% endif %}
+        </ul>
+
+
+
+        {# To be edited #}
+        <p style="font-weight:bold;font-size:20px;font-style:italic">
+            Student Number:
+        </p>
+        <p style="font-weight:bold;font-size:20px;font-style:italic">
+            <a href="/">Not logged in, return to Homepage!</a>
+        </p>
+
+        <form class="form-group" style="padding-left:15px" action="/index.php" method="post">
+            <button type="submit" class="btn btn-dark" name="logout-submit">Logout</button>
+        </form>
+    </div>
+</nav>

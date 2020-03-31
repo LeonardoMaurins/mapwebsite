@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+    MapWebsite
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="text-center">
+            <img src="../images/TUDublinLogo.png" width="350" height="250" class="text-center" alt="logo">
+            <form class="form-group" method="GET" action="/">
+                <h1>Login</h1>
+                <input type="hidden" name="action" value="processLogin">
+
+                <div class="form-group">
+                    <input type="text" class="col.col-sm-" name="username" placeholder="Student ID">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="col.col-sm-" name="password" placeholder="Password">
+                </div>
+                <a href="{{ path('signup') }}">No account? Register here!</a>
+                <br><br>
+                <a href="/index.php?action=passwordrecovery">Forgotten password?</a>
+                <br><br>
+                <a href="/index.php">Login as guest?</a>
+                <br><br>
+                <input type="submit" value="Login" name="login-submit" class="btn btn-dark">
+                <br><br>
+            </form>
+        </div>
+    </main>
+{% endblock %}
